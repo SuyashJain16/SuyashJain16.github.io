@@ -99,15 +99,42 @@ h2{color:var(--tx)}
 .mono img{display:none}
 .names{font-size:clamp(30px,8.5vw,46px);line-height:1.2;margin:4px 0 8px}
 .arch .cg{font-size:18px;margin-top:6px}.arch .eyebrow{margin-top:2px}
-.seal{flex:none}</style></head><body>
+.seal{flex:none}
+/* ---- responsive hardening: no horizontal overflow on any device ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video,canvas{max-width:100%}
+section{width:100%;padding:88px max(16px,env(safe-area-inset-right)) 72px max(16px,env(safe-area-inset-left));overflow-x:clip}
+section>*{max-width:100%;min-width:0}
+.rv{width:100%;max-width:100%}
+.card{width:100%;max-width:560px;padding:34px clamp(14px,4vw,28px);overflow-wrap:anywhere;word-break:normal;hyphens:none;margin-left:auto;margin-right:auto}
+.card p,.card small,.card span,.card b{overflow-wrap:anywhere;max-width:100%}
+.list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);font-size:clamp(12px,3.4vw,15px);gap:2px 10px}
+.list span{overflow-wrap:anywhere}
+.row{width:100%}.row>div{min-width:0}
+.tl{width:100%;max-width:520px}.ev{overflow-wrap:anywhere}.sub{gap:10px}.sub span:last-child{text-align:right}
+.gal{width:100%;max-width:520px}
+.acts{justify-content:center}
+.cd{width:100%;max-width:360px;justify-content:center;gap:clamp(6px,2vw,12px)}.cd div{flex:1;min-width:0;width:auto}
+.cd b{font-size:clamp(24px,8vw,34px)}
+header{padding:max(10px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) 10px max(14px,env(safe-area-inset-left));background:rgba(248,242,230,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid #b8924a33;gap:8px}
+header button{white-space:nowrap;padding:7px 14px;min-height:36px}
+.cr{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+#gate{height:100vh;height:100dvh}
+#gc{max-width:92vw}
+@media(max-width:360px){body{font-size:15px}.cr{display:none}.names{font-size:30px}.arch{width:94vw}}
+@media(max-height:620px){#gc{transform:translate(-50%,-50%) scale(.78)}#gate.open #gc{transform:translate(-50%,-50%) scale(.6)}.seal{width:84px;height:84px}}
+@media(min-width:900px){section{padding-top:110px}.card{max-width:640px}.tl,.gal{max-width:600px}}
+@media print{.card{box-shadow:none}html,body{overflow:visible}}
+</style></head><body>
 <canvas id="bg"></canvas>
 <div id="gate"><div class="door" id="dl"><i class="ring"></i></div><div class="door" id="dr"><i class="ring"></i></div><div class="glow"></div><a class="gcr" target="_blank" rel="noopener" href="https://instagram.com/framesaga.productions">📸 Photography by Framesaga Productions</a>
- <div id="gc"><div style="font-size:40px"></div><p class="dv">॥ ॐ श्री गणेशाय नमः ॥</p><div class="seal" id="seal1">रस</div>
+ <div id="gc"><div style="font-size:36px"></div><p class="dv">॥ ॐ श्री गणेशाय नमः ॥</p><div class="seal" id="seal1">रस</div>
  <h2 class="cg" style="color:var(--mg)"><span data-i="brideA"></span> &amp; <span data-i="brideB"></span></h2><p class="cg" data-i="date"></p>
  <button id="openBtn" data-i="open"></button><br><button class="btn" id="gl" style="margin-top:14px;color:var(--mg)"></button></div></div>
 <header><button id="lang"></button><a class="cr" target="_blank" rel="noopener" href="https://instagram.com/framesaga.productions">📸 By Framesaga Productions</a><button id="mus" aria-label="music">♪ ❚❚</button></header>
 <main>
-<section id="hero"><div class="eyebrow dv"><b>॥ शुभविवाह ॥<b></div>
+<section id="hero"><div class="eyebrow dv">॥ शुभविवाह ॥</div>
  <div class="arch rv"><svg viewBox="0 0 300 440" preserveAspectRatio="none"><path d="M6 436V200Q6 160 36 140Q56 128 66 104Q76 80 108 66Q138 52 150 8Q162 52 192 66Q224 80 234 104Q244 128 264 140Q294 160 294 200V436"/><path d="M6 436V200Q6 160 36 140Q56 128 66 104Q76 80 108 66Q138 52 150 8Q162 52 192 66Q224 80 234 104Q244 128 264 140Q294 160 294 200V436" transform="translate(150 224) scale(.93) translate(-150 -224)" stroke-width="1" opacity=".7"/></svg>
  <div class="mono" id="mono">रस</div><h1 class="names" id="names"></h1><p class="cg" data-i="date"></p><p class="eyebrow" data-i="city"></p></div></section>
 <section id="bless"><div class="rv"><div style="font-size:40px">🪔</div><p class="dv" style="font-size:20px;color:var(--tc)">॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः ॥<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</p>
